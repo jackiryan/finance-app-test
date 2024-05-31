@@ -16,7 +16,7 @@ import {
   BlogPostEdit,
   BlogPostShow,
 } from "./pages/blog-posts";
-import BlogPostList from "./pages/blog-posts/list";
+import AccountBalancePlot from "./pages/plots/balance";
 import {
   CategoryCreate,
   CategoryEdit,
@@ -34,14 +34,8 @@ function App() {
             routerProvider={routerBindings}
             resources={[
               {
-                name: "blog_posts",
-                list: "/blog-posts",
-                create: "/blog-posts/create",
-                edit: "/blog-posts/edit/:id",
-                show: "/blog-posts/show/:id",
-                meta: {
-                  canDelete: true,
-                },
+                name: "balance_data",
+                list: "/balance_data",
               },
               {
                 name: "categories",
@@ -71,13 +65,10 @@ function App() {
               >
                 <Route
                   index
-                  element={<NavigateToResource resource="blog_posts" />}
+                  element={<NavigateToResource resource="balance_data" />}
                 />
-                <Route path="/blog-posts">
-                  <Route index element={<BlogPostList />} />
-                  <Route path="create" element={<BlogPostCreate />} />
-                  <Route path="edit/:id" element={<BlogPostEdit />} />
-                  <Route path="show/:id" element={<BlogPostShow />} />
+                <Route path="/balance_data">
+                  <Route index element={<AccountBalancePlot />} />
                 </Route>
                 <Route path="/categories">
                   <Route index element={<CategoryList />} />

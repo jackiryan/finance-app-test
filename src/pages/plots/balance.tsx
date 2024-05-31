@@ -46,7 +46,7 @@ const data = [
   },
 ];
 
-export default class BlogPostList extends PureComponent {
+export default class AccountBalancePlot extends PureComponent {
 
   render() {
     return (
