@@ -11,12 +11,7 @@ import dataProvider from "@refinedev/simple-rest";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/layout";
-import {
-  BlogPostCreate,
-  BlogPostEdit,
-  BlogPostShow,
-} from "./pages/blog-posts";
-import AccountBalancePlot from "./pages/plots/balance";
+import { AccountBalancePlot } from "./pages/blog-posts";
 import {
   CategoryCreate,
   CategoryEdit,
@@ -30,7 +25,7 @@ function App() {
       <RefineKbarProvider>
         <DevtoolsProvider>
           <Refine
-            dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
+            dataProvider={dataProvider("http://localhost:3000")}
             routerProvider={routerBindings}
             resources={[
               {
