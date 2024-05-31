@@ -16,7 +16,6 @@ export const AccountBalancePlot = () => {
   });
 
   const balanceData = data?.data ?? [];
-  console.log(balanceData);
 
   return (
     <div className="w-full h-full">
