@@ -1,0 +1,13 @@
+{
+    "graphs": [
+      { "id": "1", "title": "Account Balance", "xLabelId": "1", "yLabelId": "2" },
+      { "id": "2", "title": "another title" }
+    ],
+    "labels": [
+      { "id": "1", "text": "Month", "unit": "None" },
+      { "id": "2", "text": "Balance", "unit": "$" }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
